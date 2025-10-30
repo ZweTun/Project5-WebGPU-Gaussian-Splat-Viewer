@@ -57,6 +57,7 @@ The WebGPU Gaussian Splat Viewer renders 3D scenes using Gaussian Splatting, whe
 | **Gaussian Splat Bonsai** | <img src="images/bonsai1.png" width="300"/> | 51 FPS
 | **Point Cloud Bicycle** | <img src="images/bicycle_point.png" width="300"/> | 165 FPS
 | **Gaussian Splat Bicycle**  | <img src="images/bicycle.png" width="300"/> | 13 FPS
+
 *Bonsai.ply loaded with 272956 points and Bicycle.ply loaded with 1063091 points*
 
 The performance comparison shows that the point cloud renderer is significantly faster than the Gaussian splat renderer, achieving over 160 FPS on both the Bonsai and Bicycle scenes. This is expected because the point cloud approach simply projects individual points without additional preprocessing, depth sorting, or complex fragment shading. It is highly efficient for real-time visualization but produces sparse and less realistic images, especially for surfaces that require continuity.
