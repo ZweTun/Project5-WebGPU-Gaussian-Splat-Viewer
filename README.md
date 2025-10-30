@@ -14,7 +14,7 @@
 The WebGPU Gaussian Splat Viewer renders 3D scenes using Gaussian Splatting, where each point is represented by a smooth 3D Gaussian instead of a triangle. Each Gaussian defines its position, color, scale, and opacity, and when projected to screen space, becomes an elliptical “splat.” The viewer preprocesses and sorts these splats on the GPU using WebGPU, then blends them back-to-front to form continuous surfaces. 
 
 
----
+
 
 ### Implementation Summary  
 
@@ -64,6 +64,18 @@ The performance comparison shows that the point cloud renderer is significantly 
 In contrast, the Gaussian splat renderer requires multiple GPU-intensive steps, including view-frustum culling, 3D-to-2D covariance computation, spherical harmonics color evaluation, depth sorting, and blending. As a result, frame rates drop considerably (51 FPS for Bonsai and 13 FPS for Bicycle), particularly in scenes with many Gaussians. Despite the lower performance, this renderer produces more realistic surfaces with depth and shading, showing the trade-off between visual quality and computational cost.
 
 
+---
+
+### Running the code
+Follow these steps to install and view the project:
+
+- Clone this repository
+- Download and install Node.js
+- Run npm install in the root directory of this project to download and install dependencies
+- Run npm run dev, which will open the project in your browser
+
+---
+
 ### Credits
 
 - [Vite](https://vitejs.dev/)
@@ -71,4 +83,5 @@ In contrast, the Gaussian splat renderer requires multiple GPU-intensive steps, 
 - [stats.js](https://github.com/mrdoob/stats.js)
 - [wgpu-matrix](https://github.com/greggman/wgpu-matrix)
 - [Ply Files](https://drive.google.com/drive/folders/1Fz0QhyDU12JTsl2e7umGi5iy_V9drrIW)
+- [Psuedocode](https://github.com/kwea123/gaussian_splatting_notes)
 - Special Thanks to: Shrek Shao (Google WebGPU team) & [Differential Guassian Renderer](https://github.com/graphdeco-inria/diff-gaussian-rasterization)
