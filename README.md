@@ -50,10 +50,10 @@ The WebGPU Gaussian Splat Viewer renders 3D scenes using Gaussian Splatting, whe
 
 | Renderer | Visualization | Description |
 |-----------|----------------|--------------|
-| **Point Cloud Bonsai** | <img src="images/pointcloud.png" width="300"/> | 
-| **Gaussian Splat Bonsai** | <img src="images/quad_white.png" width="300"/> | 
-| **Point Cloud Bicycle** | <img src="images/quad_color.png" width="300"/> | 
-| **Gaussian Splat Bicycle**  | <img src="images/quad_color.png" width="300"/> | 
+| **Point Cloud Bonsai** | <img src="images/bonsai_point.png" width="300"/> | 
+| **Gaussian Splat Bonsai** | <img src="images/bonsai1.png" width="300"/> | 
+| **Point Cloud Bicycle** | <img src="images/bicycle_point.png" width="300"/> | 
+| **Gaussian Splat Bicycle**  | <img src="images/bicycle.png" width="300"/> | 
 
 
 ### Credits
