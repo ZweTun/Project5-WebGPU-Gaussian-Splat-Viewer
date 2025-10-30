@@ -20,30 +20,29 @@ Transforms each 3D Gaussian into camera space, performs view-frustum culling, an
 Spherical harmonics are evaluated for color, producing visible splats ready for sorting.
 
 **High-Level Steps:**  
-- Transform Gaussian means into camera space  
-- Perform view-frustum culling to discard invisible splats  
-- Project 3D covariance matrices into 2D screen-space conics  
-- Evaluate spherical harmonics based on view direction to compute color  
-- Output visible Gaussians with updated screen-space properties  
+1. Transform Gaussian means into camera space  
+2. Perform view-frustum culling to discard invisible splats  
+3. Project 3D covariance matrices into 2D screen-space conics  
+4. Evaluate spherical harmonics based on view direction to compute color  
+5. Output visible Gaussians with updated screen-space properties  
 
----
 
 #### **Sorting (Compute Shader)**  
 Visible Gaussians are GPU-sorted by depth to ensure correct back-to-front transparency during rendering, preserving visual accuracy and avoiding blending artifacts.
 
 **High-Level Steps:**  
-- Sort visible splats by depth using radix sort for correct transparency  
-- Store sorted indices in a GPU buffer for efficient draw calls  
+1. Sort visible splats by depth using radix sort for correct transparency  
+2. Store sorted indices in a GPU buffer for efficient draw calls  
 
----
+
 
 #### **Rasterization (Render Pipeline)**  
 Each Gaussian becomes a screen-space quad. The vertex shader positions it, and the fragment shader computes opacity and color from the ellipse footprint, blending results to form the final image.
 
 **High-Level Steps:**  
-- Vertex shader expands each Gaussian into a 6-vertex quad (two triangles)  
-- Fragment shader evaluates the Gaussian density for per-pixel opacity and color  
-- Blending accumulates splats to form the final image  
+1. Vertex shader expands each Gaussian into a 6-vertex quad (two triangles)  
+2. Fragment shader evaluates the Gaussian density for per-pixel opacity and color  
+3. Blending accumulates splats to form the final image  
 
 [![](img/thumb.png)](http://TODO.github.io/Project4-WebGPU-Forward-Plus-and-Clustered-Deferred)
 
