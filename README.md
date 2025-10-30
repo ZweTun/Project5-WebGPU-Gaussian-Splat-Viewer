@@ -99,4 +99,5 @@ Future improvements could include increasing this resolution and implementing ad
 - [wgpu-matrix](https://github.com/greggman/wgpu-matrix)
 - [Ply Files](https://drive.google.com/drive/folders/1Fz0QhyDU12JTsl2e7umGi5iy_V9drrIW)
 - [Psuedocode](https://github.com/kwea123/gaussian_splatting_notes)
+- [CIS 5650 Slides](https://docs.google.com/presentation/d/17vKC9Vo7QuMcKhkE_xCy7FOfXo-s8re1TiW0SjahBX8/edit?slide=id.p#slide=id.p)
 - Special Thanks to: Shrek Shao (Google WebGPU team) & [Differential Guassian Renderer](https://github.com/graphdeco-inria/diff-gaussian-rasterization)
