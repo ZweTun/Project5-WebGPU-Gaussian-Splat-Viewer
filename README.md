@@ -4,7 +4,9 @@
 * Zwe Tun
   * LinkedIn: https://www.linkedin.com/in/zwe-tun-6b7191256/
 * Tested on: Intel(R) i7-14700HX, 2100 Mhz, RTX 5060 Laptop
-![WebGPU](img/cover4.gif)
+![Gauss](img/bonsai.png)
+
+
 
 
 ---
