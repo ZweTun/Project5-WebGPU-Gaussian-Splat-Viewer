@@ -79,6 +79,9 @@ Follow these steps to install and view the project:
 
 ---
 
+![Gauss](images/cover4.gif)
+
+
 ### Credits
 
 - [Vite](https://vitejs.dev/)
