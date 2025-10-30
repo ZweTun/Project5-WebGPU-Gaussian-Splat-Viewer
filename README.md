@@ -14,6 +14,8 @@
 The WebGPU Gaussian Splat Viewer renders 3D scenes using Gaussian Splatting, where each point is represented by a smooth 3D Gaussian instead of a triangle. Each Gaussian defines its position, color, scale, and opacity, and when projected to screen space, becomes an elliptical “splat.” The viewer preprocesses and sorts these splats on the GPU using WebGPU, then blends them back-to-front to form continuous surfaces. 
 
 
+---
+
 ### Implementation Summary  
 
 **Preprocessing (Compute Shader)**  
@@ -27,7 +29,7 @@ The WebGPU Gaussian Splat Viewer renders 3D scenes using Gaussian Splatting, whe
    4. Evaluate spherical harmonics based on view direction to compute color  
    5. Output visible Gaussians with updated screen-space properties  
 
----
+
 
 **Sorting (Compute Shader)**  
    Visible Gaussians are GPU-sorted by depth to ensure correct back-to-front transparency during rendering, preserving visual accuracy and avoiding blending artifacts.
@@ -36,7 +38,6 @@ The WebGPU Gaussian Splat Viewer renders 3D scenes using Gaussian Splatting, whe
    1. Sort visible splats by depth using radix sort for correct transparency  
    2. Store sorted indices in a GPU buffer for efficient draw calls  
 
----
 
 **Rasterization (Render Pipeline)**  
    Each Gaussian becomes a screen-space quad. The vertex shader positions it, and the fragment shader computes opacity and color from the ellipse footprint, blending results to form the final image.
@@ -45,6 +46,8 @@ The WebGPU Gaussian Splat Viewer renders 3D scenes using Gaussian Splatting, whe
    1. Vertex shader expands each Gaussian into a 6-vertex quad (two triangles)  
    2. Fragment shader evaluates the Gaussian density for per-pixel opacity and color  
    3. Blending accumulates splats to form the final image  
+
+---
 
 ### Comparison: Point Cloud vs. Gaussian Splat Rendering  
 
