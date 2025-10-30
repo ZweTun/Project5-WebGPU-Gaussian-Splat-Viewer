@@ -52,10 +52,7 @@ The WebGPU Gaussian Splat Viewer renders 3D scenes using Gaussian Splatting, whe
 |-----------|----------------|--------------|
 | **Point Cloud Bonsai** | <img src="images/bonsai_point.png" width="300"/> | 
 | **Gaussian Splat Bonsai** | <img src="images/bonsai1.png" width="300"/> | 
-| **Point Cloud Bicycle** | <img src="images/bicycle_point.png" width="300"/> | num points: 1063091
-processing time: 14419 ms
-performance: 165 fps
-
+| **Point Cloud Bicycle** | <img src="images/bicycle_point.png" width="300"/> | num points: 1063091 processing time: 14419 ms performance: 165 fps
 | **Gaussian Splat Bicycle**  | <img src="images/bicycle.png" width="300"/> | performance: 13.7 fps
 
 
