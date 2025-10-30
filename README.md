@@ -15,7 +15,7 @@ The WebGPU Gaussian Splat Viewer renders 3D scenes using Gaussian Splatting, whe
 
 ### Implementation Summary  
 
-- **Preprocessing (Compute Shader): **  
+- **Preprocessing (Compute Shader):**  
   Transforms each 3D Gaussian into camera space, performs view-frustum culling, and projects its covariance into a 2D ellipse. Spherical harmonics are evaluated for color, producing visible splats ready for sorting.
 
   **High-Level Steps:**  
@@ -29,7 +29,7 @@ The WebGPU Gaussian Splat Viewer renders 3D scenes using Gaussian Splatting, whe
 
 - Outputs visible Gaussians with updated screen-space properties.
 
-- **Sorting (Compute Shader): **  
+- **Sorting (Compute Shader):**  
  Visible Gaussians are GPU-sorted by depth to ensure correct back-to-front transparency during rendering, preserving visual accuracy and avoiding blending artifacts.
 
   **High-Level Steps:**  
