@@ -46,19 +46,15 @@ The WebGPU Gaussian Splat Viewer renders 3D scenes using Gaussian Splatting, whe
    2. Fragment shader evaluates the Gaussian density for per-pixel opacity and color  
    3. Blending accumulates splats to form the final image  
 
-[![](img/thumb.png)](http://TODO.github.io/Project4-WebGPU-Forward-Plus-and-Clustered-Deferred)
+### Comparison: Point Cloud vs. Gaussian Splat Rendering  
 
-### Demo Video/GIF
+| Renderer | Visualization | Description |
+|-----------|----------------|--------------|
+| **Point Cloud Bonsai** | <img src="images/pointcloud.png" width="300"/> | 
+| **Gaussian Splat Bonsai** | <img src="images/quad_white.png" width="300"/> | 
+| **Point Cloud Bicycle** | <img src="images/quad_color.png" width="300"/> | 
+| **Gaussian Splat Bicycle**  | <img src="images/quad_color.png" width="300"/> | 
 
-[![](img/video.mp4)](TODO)
-
-### (TODO: Your README)
-
-*DO NOT* leave the README to the last minute! It is a crucial part of the
-project, and we will not be able to grade you without a good README.
-
-This assignment has a considerable amount of performance analysis compared
-to implementation work. Complete the implementation early to leave time!
 
 ### Credits
 
