@@ -81,6 +81,13 @@ Follow these steps to install and view the project:
 
 ![Gauss](images/cover4.gif)
 
+---
+
+### Future Work  
+
+While the Gaussian splat renderer produces viable reconstructions, the current implementation has several limitations. The render is not yet high-definition, and fine details can appear blurred, especially in areas with sparse Gaussian coverage. Additionally, some artifacts and noise are visible around edges and in overlapping regions.
+
+Future improvements could include increasing this resolution and implementing adaptive splat sizes to better capture small features. More advanced filtering or anti-aliasing techniques could reduce visual noise and edge artifacts. Optimizing the overall preprocessing and rendenering pipelines, as well as leveraging tile-based or level-of-detail rendering, could also improve performance while maintaining fidelity for dense scenes.
 
 ### Credits
 
