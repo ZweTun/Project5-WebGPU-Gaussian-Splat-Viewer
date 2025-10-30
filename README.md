@@ -54,6 +54,11 @@ The WebGPU Gaussian Splat Viewer renders 3D scenes using Gaussian Splatting, whe
 | **Gaussian Splat Bonsai** | <img src="images/bonsai1.png" width="300"/> | 51 FPS
 | **Point Cloud Bicycle** | <img src="images/bicycle_point.png" width="300"/> | 165 FPS
 | **Gaussian Splat Bicycle**  | <img src="images/bicycle.png" width="300"/> | 13 FPS
+*Bonsai.ply loaded with 272956 points and Bicycle.ply loaded with 1063091 points*
+
+The performance comparison shows that the point cloud renderer is significantly faster than the Gaussian splat renderer, achieving over 160 FPS on both the Bonsai and Bicycle scenes. This is expected because the point cloud approach simply projects individual points without additional preprocessing, depth sorting, or complex fragment shading. It is highly efficient for real-time visualization but produces sparse and less realistic images, especially for surfaces that require continuity.
+
+In contrast, the Gaussian splat renderer requires multiple GPU-intensive steps, including view-frustum culling, 3D-to-2D covariance computation, spherical harmonics color evaluation, depth sorting, and blending. As a result, frame rates drop considerably (51 FPS for Bonsai and 13 FPS for Bicycle), particularly in scenes with many Gaussians. Despite the lower performance, this renderer produces more realistic surfaces with depth and shading, showing the trade-off between visual quality and computational cost.
 
 
 ### Credits
@@ -62,4 +67,5 @@ The WebGPU Gaussian Splat Viewer renders 3D scenes using Gaussian Splatting, whe
 - [tweakpane](https://tweakpane.github.io/docs//v3/monitor-bindings/)
 - [stats.js](https://github.com/mrdoob/stats.js)
 - [wgpu-matrix](https://github.com/greggman/wgpu-matrix)
+- [Ply Files](https://drive.google.com/drive/folders/1Fz0QhyDU12JTsl2e7umGi5iy_V9drrIW)
 - Special Thanks to: Shrek Shao (Google WebGPU team) & [Differential Guassian Renderer](https://github.com/graphdeco-inria/diff-gaussian-rasterization)
