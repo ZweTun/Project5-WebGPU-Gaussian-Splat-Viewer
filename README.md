@@ -89,6 +89,8 @@ While the Gaussian splat renderer produces viable reconstructions, the current i
 
 Future improvements could include increasing this resolution and implementing adaptive splat sizes to better capture small features. More advanced filtering or anti-aliasing techniques could reduce visual noise and edge artifacts. Optimizing the overall preprocessing and rendenering pipelines, as well as leveraging tile-based or level-of-detail rendering, could also improve performance while maintaining fidelity for dense scenes.
 
+---
+
 ### Credits
 
 - [Vite](https://vitejs.dev/)
